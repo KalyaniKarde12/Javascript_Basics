@@ -18,18 +18,17 @@ console.log(arr.includes(2));  //check if 2 exists in arr
 
 console.log(arr.indexOf(2)); // get index of a value
 
-const nums = [10, 20, 30, 40];
+const nums = [1, 2, 3, 4];
 console.log(nums);
 
 console.log(nums.slice(1, 3));   // to get part of array 
 
-nums.forEach(num => console.log(num)); // to loop through array
+nums.forEach(num => console.log(num)); // to loop through array on each element
 
-const double = nums.map(n => n * 2);  // used to transform array values
-console.log(double);  
-
-const filter = nums.filter(n => n > 20);  //used to get the particular elemets that meets the condition
-console.log(filter);  
+console.log("To print square usng forEach")
+nums.forEach((num)=>{
+    console.log(num*num);
+})
 
 const a = [3, 1, 2];
 a.sort();  
@@ -38,9 +37,43 @@ console.log(a);
 a.reverse();  //used to reverse an array
 console.log(a);  
 
+console.log("map");
+const sq=nums.map((el)=>{
+   return el*el;
+})
+console.log(sq);
 
+console.log("Filter");
+const filter = nums.filter(n => n > 2);  //used to get the particular elemets that meets the condition
+console.log(filter);  
 
+//every method--> gives true if all the elements satisfy the conditions in the array else returns false
+const numbers=[10,13,14,16];
+const evry=numbers.every((el)=>{
+    return el%2==0;
+})
+console.log(evry);
 
+//some method-->it is like logical or; returns true if functions is true for some elements else false
+const some=numbers.some((el)=>{
+    return el%2==0;
+})
+console.log(some);
+
+//reduce method-->reduces the array to a single value
+//reduce(accumulator,element)
+const cart=[{
+    name:'Watch',
+    price:500
+},{
+    name:'Mobile',
+    price:7000
+},{
+    name:'Laptop',
+    price:40000
+}]
+const totalPrice=cart.reduce((res,value)=> res+value.price,0);
+console.log(totalPrice);
 
 
 
