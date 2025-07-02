@@ -155,3 +155,15 @@ function firstChar2(){
    }
 }
 firstChar2();
+
+// 10. Write a program to calculate the power of a number using exponentiation
+function pow() {
+    let base = 2;
+    let exponent = 4;
+    let result = 1;
+    for (let i = 0; i < exponent; i++) {
+        result = result * base;
+    }
+    console.log("Power of a number using exponentiation:", result);
+}
+pow();
