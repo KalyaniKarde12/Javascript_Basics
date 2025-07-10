@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Enter your name: <input type="text">
+    <h1> </h1>
+    <script>
+        const input = document.querySelector('input');
+        const h1 = document.querySelector("h1");
+        input.addEventListener("input", function () {
+            const filteredValue = input.value.replace(/[^a-zA-Z ]/g, '');
+            h1.innerText = filteredValue;
+        })
+    </script>
+</body>
+
+</html>

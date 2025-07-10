@@ -76,3 +76,10 @@ const student = {
 const { name, course } = student;
 console.log(name);   // "Kalyani"
 console.log(course); // "Computer Science"
+
+//Event listener in js
+
+
+function chngColor(){
+
+}
